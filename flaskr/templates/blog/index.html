@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Posts{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for post in posts %}
+    <article class="post">
+      <div class="d-flex justify-content-between align-items-start">
+
+        <!-- Post content -->
+        <div class="flex-grow-1 me-4">
+          <header>
+            <div>
+              <h1>{{ post['title'] }}</h1>
+              <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+            </div>
+            {% if g.user and g.user['id'] == post['author_id'] %}
+              <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+            {% endif %}
+          </header>
+          <p class="body">{{ post['body'] }}</p>
+        </div>
+        <!-- Like counter -->
+        <div class="text-center" style="min-width: 80px;">
+          <form action="{{ url_for('blog.like', id=post['id']) }}" method="post">
+          <button type="submit" class="btn btn-sm {{ 'btn-success' if post['id'] in session.get('liked_posts', []) else 'btn-outline-secondary' }}">
+          👍
+          </button>
+      </form>
+  <div class="fw-bold fs-5 mt-1">{{ post['like'] or 0 }}</div>
+</div>
+
+
+      </div>
+
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
