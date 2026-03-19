@@ -26,10 +26,10 @@ def initiate_search(search_term, email):
     record = Entrez.read(handle)
     handle.close()
 
-    if record['Count'] == 0:
-        return None
+    total_records = int(record['Count'])
 
-    print(f"Total records found: {record['Count']}\n")
+    if total_records == 0:
+        return None
 
     # Get summaries for ONLY 500 records maximum.
 
@@ -90,4 +90,4 @@ def initiate_search(search_term, email):
 
     df = df.drop('FullSequence', axis=1)
 
-    return df
+    return df, total_records

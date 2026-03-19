@@ -20,7 +20,7 @@ def organelle_search():
 @bp.route('/search/<path:organism>')
 @login_required
 def search_organelle(organism):
-    df = initiate_search(organism, g.user['username'])
+    df, total_records = initiate_search(organism, g.user['username'])
     if df.empty:
         flash("Sorry, no results found.")
         return redirect(url_for('search.organelle_search'))
@@ -38,6 +38,6 @@ def search_organelle(organism):
                 'INSERT INTO result (search_id, accession,title,bp_length,updated,ambiguity_percentage) VALUES (?, ?, ?, ?, ?, ?)',
                 (search_id, result['Accession'], result["Title"], result["BP Length"], result['Updated'], result['Ambiguity Percentage']))
         db.commit()
-        return render_template('search/results.html', results=results, organism=organism)
+        return render_template('search/results.html', results=results, organism=organism, total_records=total_records)
 
 
