@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS user;
-DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS search;
+DROP TABLE IF EXISTS result;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -7,12 +8,22 @@ CREATE TABLE user (
   password TEXT NOT NULL
 );
 
-CREATE TABLE post (
+CREATE TABLE search (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  author_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  organism TEXT NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  result_count INTEGER,
+  FOREIGN KEY (user_id) REFERENCES user (id)
+);
+
+CREATE TABLE result (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  search_id INTEGER NOT NULL,
+  accession TEXT NOT NULL,
   title TEXT NOT NULL,
-  body TEXT NOT NULL,
-  like INTEGER NOT NULL DEFAULT 0,
-  FOREIGN KEY (author_id) REFERENCES user (id)
+  bp_length INTEGER,
+  updated TEXT,
+  ambiguity_percentage REAL,
+  FOREIGN KEY (search_id) REFERENCES search (id)
 );
