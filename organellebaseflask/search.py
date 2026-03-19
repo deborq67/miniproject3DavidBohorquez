@@ -29,10 +29,10 @@ def search_organelle(organism):
         results = df.to_dict('records')
 
 
-        db.execute(
+        result_id = db.execute(
             'INSERT INTO search (user_id, organism, result_count) VALUES (?, ?, ?)',
             (g.user['id'], organism, len(results)))
-        search_id = db.lastrowid
+        search_id = result_id.lastrowid
         for result in results:
             db.execute(
                 'INSERT INTO result (search_id, accession,title,bp_length,updated,ambiguity_percentage) VALUES (?, ?, ?, ?, ?, ?)',
