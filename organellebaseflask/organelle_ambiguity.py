@@ -1,5 +1,4 @@
 from Bio import Entrez, SeqIO
-from myemail import email
 from io import StringIO
 import pandas as pd
 import time

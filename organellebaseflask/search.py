@@ -9,11 +9,35 @@ from organellebaseflask.db import get_db
 
 #Grabbing my script now:
 
+from organellebaseflask.organelle_ambiguity import initiate_search
 
 bp = Blueprint('search', __name__)
 
 @bp.route('/')
-@login_required
 def organelle_search():
     return render_template('search/index.html')
+
+@bp.route('/search/<path:organism>')
+@login_required
+def search_organelle(organism):
+    df = initiate_search(organism, g.user['username'])
+    if df.empty:
+        flash("Sorry, no results found.")
+        return redirect(url_for('search.organelle_search'))
+    else:
+        db = get_db()
+        results = df.to_dict('records')
+
+
+        db.execute(
+            'INSERT INTO search (user_id, organism, result_count) VALUES (?, ?, ?)',
+            (g.user['id'], organism, len(results)))
+        search_id = db.lastrowid
+        for result in results:
+            db.execute(
+                'INSERT INTO result (search_id, accession,title,bp_length,updated,ambiguity_percentage) VALUES (?, ?, ?, ?, ?, ?)',
+                (search_id, result['Accession'], result["Title"], result["BP Length"], result['Updated'], result['Ambiguity Percentage']))
+        db.commit()
+        return render_template('search/results.html', results=results, organism=organism)
+
 
