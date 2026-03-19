@@ -1,28 +1,45 @@
 ### INF601 - Advanced Programming in Python
 ### David Bohorquez
-### Flask Tutorial
+### Mini Project 3
  
  
-# Project Title
+# Organelle Ambiguity Search
  
-Simple overview of use/purpose.
- 
+Mini Project 2: Fun Graphs About Fish
+
+![Darter.png](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/etheostoma_brevirostrum_holiday_darter.jpg?itok=FOZxD5ov)
+*Source: USGS*
+
 ## Description
- 
-An in-depth paragraph about your project and overview of use.
- 
+
+This program shows some different statistics on fish diversity using charts. It gives 3 different graphs each representing a different question:
+
+* What fish orders have the most species? (pie chart)
+* What countries have the most species diversity? (bar chart)
+* Since 1980, what orders were the most frequently identified by year? (line graph)
+
 ## Getting Started
+
+### Installing
+
+This program was made using Python 3.13.11.
  
 ### Dependencies
  
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
+You need the actual ZIP file the with database to start.
+
+Download it [here.](https://www.gbif.se/ipt/archive.do?r=fishbase)
+
+* ZIP file should be called `dwca-fishbase-v4.5.zip`. Put into your directory of execution.
+* From it extract `occurrence.txt`, **file is over 300 MB.**
+  * If you forget, the program would send you a friendly reminder to have it in your directory anyway.
+
+All other dependencies needed are listed in the requirements.txt document. To install them, execute this command on Python:
  
-### Installing
- 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+```
+pip install -r requirements.txt
+```
+
  
 ### Executing program
  
@@ -39,35 +56,42 @@ flask --app flaskr init-db
 flask --app flask 
 ```
 ## Help
+
+*Why is this program so slow?
  
 ```
 command to run if program contains helper info
 ```
  
+## Help
+
+* **How accurate is this data?**
+
+As a fish enthusiast, I can tell you that this dataset has many flaws. It was mainly compiled from data observations from as early as the 1890s! As such, many of these observations are biased towards North America but unfortunately this was the best fish data I could find freely available.
+
+If you're interested in knowing about more accurate fish databases, please check out [fishbase.se](https://www.fishbase.se/) (one of my favorite scientific websites) or [Eschmeyer's Catalog of Fishes](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp?_gl=1*f99s5a*_gcl_au*MTUxMzk1MjY2LjE3NzE3OTc1MjY.*_ga*MTc0MjQ3NzYwNy4xNzcxNzk3NTI2*_ga_6Y72VP61VZ*czE3NzE3OTc1MjUkbzEkZzAkdDE3NzE3OTc1MjUkajYwJGwwJGg5MzEzOTcxMzQ.).
+
+* **I downloaded the ZIP file but the program is telling me `Download ZIP file and extract occurrence.txt at https://www.gbif.se/ipt/archive.do?r=fishbase`.**
+
+You might have forgotten to extract `occurrence.txt` from *within* the ZIP file and should do so within the same directory as the `main.py` file. Also, please do not tamper with the spaces in the text file as it is tab-delimited and doing so could corrupt the way Pandas reads it.
+ 
 ## Authors
  
-Contributors names and contact info
- 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+David Bohorquez
  
 ## Version History
- 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+
+* Released as main.py
  
 ## License
  
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the GNU General Public License - see the LICENSE.md file for details
  
 ## Acknowledgments
  
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Pandas Documentation](https://pandas.pydata.org/docs/user_guide/index.html)
+* [Matplotlib Documentation](https://matplotlib.org/stable/api/matplotlib_configuration_api.html)
+* [GBIF Sweden for providing this fish data set.](https://www.gbif.org/)
+* [Stack Overflow post that helped filter orders.](https://stackoverflow.com/questions/18358938/get-row-index-values-of-pandas-dataframe-as-list)
+* [This other post also assisted immensely in filtering orders.](https://stackoverflow.com/questions/17071871/how-do-i-select-rows-from-a-dataframe-based-on-column-values)
+* [This source helped make the subset for the line graph.](https://stackoverflow.com/questions/35268817/unique-combinations-of-values-in-selected-columns-in-pandas-data-frame-and-count)

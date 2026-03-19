@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Error: {% endblock %}
+
+{% block content %}
+
+<div class="custom-bg text-dark">
+    <div class="d-flex align-items-center justify-content-center min-vh-100 px-2">
+        <div class="text-center">
+            <h1 class="display-1 fw-bold">Sorry, no results were found.</h1>
+            <p class="fs-2 fw-medium mt-4">Make sure the name was spelled correctly and try again.</p>
+            <a href="/" class="btn btn-light fw-semibold rounded-pill px-4 py-2 custom-btn">
+                New Search
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

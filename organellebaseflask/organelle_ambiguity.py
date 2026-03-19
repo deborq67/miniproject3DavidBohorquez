@@ -29,7 +29,7 @@ def initiate_search(search_term, email):
     total_records = int(record['Count'])
 
     if total_records == 0:
-        return None
+        return pd.DataFrame(), 0
 
     # Get summaries for ONLY 500 records maximum.
 

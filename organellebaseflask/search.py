@@ -17,17 +17,19 @@ bp = Blueprint('search', __name__)
 def organelle_search():
     return render_template('search/index.html')
 
+@bp.route('/error')
+def error_page():
+   return render_template('search/error.html')
+
 @bp.route('/search/<path:organism>')
 @login_required
 def search_organelle(organism):
     df, total_records = initiate_search(organism, g.user['username'])
     if df.empty:
-        flash("Sorry, no results found.")
-        return redirect(url_for('search.organelle_search'))
+        return redirect(url_for('search.error_page'))
     else:
         db = get_db()
         results = df.to_dict('records')
-
 
         result_id = db.execute(
             'INSERT INTO search (user_id, organism, result_count) VALUES (?, ?, ?)',
