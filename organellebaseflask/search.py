@@ -15,7 +15,7 @@ bp = Blueprint('search', __name__)
 
 @bp.route('/')
 def organelle_search():
-    return render_template('search/index.html')
+    return render_template('search/search.html')
 
 @bp.route('/error')
 def error_page():

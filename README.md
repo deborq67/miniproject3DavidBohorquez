@@ -5,8 +5,7 @@
  
 # Organelle Ambiguity Search
  
-Mini Project 2: Fun Graphs About Fish
-
+Find ambiguity content in the DNA of organelle genomes.
 ![Darter.png](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/etheostoma_brevirostrum_holiday_darter.jpg?itok=FOZxD5ov)
 *Source: USGS*
 
@@ -89,9 +88,9 @@ This project is licensed under the GNU General Public License - see the LICENSE.
  
 ## Acknowledgments
  
-* [Pandas Documentation](https://pandas.pydata.org/docs/user_guide/index.html)
-* [Matplotlib Documentation](https://matplotlib.org/stable/api/matplotlib_configuration_api.html)
-* [GBIF Sweden for providing this fish data set.](https://www.gbif.org/)
+* [Fayette Reynolds for the background image.](https://www.pexels.com/photo/cell-seen-under-microscope-11198505/)
+* [Bootstrap Template for Search Bar](https://bootstrapexamples.com/@anonymous/search-bar)
+* [Bootstrap Template for Error Page](https://bootstrapexamples.com/@valeria/404-page-template-2)
 * [Stack Overflow post that helped filter orders.](https://stackoverflow.com/questions/18358938/get-row-index-values-of-pandas-dataframe-as-list)
 * [This other post also assisted immensely in filtering orders.](https://stackoverflow.com/questions/17071871/how-do-i-select-rows-from-a-dataframe-based-on-column-values)
 * [This source helped make the subset for the line graph.](https://stackoverflow.com/questions/35268817/unique-combinations-of-values-in-selected-columns-in-pandas-data-frame-and-count)

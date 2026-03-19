@@ -1,4 +1,4 @@
-html { font-family: fantasy; background-image: url("Cell.jpg"); background-color: #cccccc; padding: 1rem; min-height: 100vh; border-radius: 12px }
+html { font-family: fantasy; background-image: url("https://images.pexels.com/photos/11198505/pexels-photo-11198505.jpeg"); background-color: #cccccc; padding: 1rem; min-height: 100vh; border-radius: 12px }
 body { max-width: 1200px; width: 100%; margin: 0 auto; background: white; }
 h1 { font-family: serif; color: #377ba8; margin: 1rem 0; }
 a { color: #377ba8; }
