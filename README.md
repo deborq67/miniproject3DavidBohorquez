@@ -112,20 +112,13 @@ can make is 3 per second. Same reason the maximum amount of results shown is 500
 This has already been accounted for in the script and a limit was placed so even if
 you misspell your email, you shouldn't be blocked. However, please try to put a valid
 
-
-
-
-* **I downloaded the ZIP file but the program is telling me `Download ZIP file and extract occurrence.txt at https://www.gbif.se/ipt/archive.do?r=fishbase`.**
-
-You might have forgotten to extract `occurrence.txt` from *within* the ZIP file and should do so within the same directory as the `main.py` file. Also, please do not tamper with the spaces in the text file as it is tab-delimited and doing so could corrupt the way Pandas reads it.
- 
 ## Authors
  
 David Bohorquez
  
 ## Version History
 
-* Released as main.py
+* Released as organellebaseflask.zip.
  
 ## License
  
@@ -136,6 +129,4 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 * [Fayette Reynolds for the background image.](https://www.pexels.com/photo/cell-seen-under-microscope-11198505/)
 * [Bootstrap Template for Search Bar](https://bootstrapexamples.com/@anonymous/search-bar)
 * [Bootstrap Template for Error Page](https://bootstrapexamples.com/@valeria/404-page-template-2)
-* [Stack Overflow post that helped filter orders.](https://stackoverflow.com/questions/18358938/get-row-index-values-of-pandas-dataframe-as-list)
-* [This other post also assisted immensely in filtering orders.](https://stackoverflow.com/questions/17071871/how-do-i-select-rows-from-a-dataframe-based-on-column-values)
-* [This source helped make the subset for the line graph.](https://stackoverflow.com/questions/35268817/unique-combinations-of-values-in-selected-columns-in-pandas-data-frame-and-count)
+* [Bootstrap Template for Tables](https://getbootstrap.com/docs/4.0/content/tables/)
