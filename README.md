@@ -134,6 +134,10 @@ you misspell your email, you shouldn't be blocked. However, please try to put a 
  
 ## Version History
 
+### v1.1
+* Changed name to organellesearch.zip and fixed a directory issue that did not allow execution.
+
+### v1.0
 * Released as organellebaseflask.zip.
  
 ## License
