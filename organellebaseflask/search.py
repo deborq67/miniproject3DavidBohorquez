@@ -25,6 +25,11 @@ def error_page():
 def search_organelle(organism):
     df, total_records = initiate_search(organism, g.user['username'])
     if df.empty:
+        db = get_db()
+        result_id = db.execute(
+            'INSERT INTO search (user_id, organism, result_count) VALUES (?, ?, ?)',
+            (g.user['id'], organism, 0))
+        db.commit()
         return redirect(url_for('search.error_page'))
     else:
         db = get_db()
@@ -32,7 +37,7 @@ def search_organelle(organism):
 
         result_id = db.execute(
             'INSERT INTO search (user_id, organism, result_count) VALUES (?, ?, ?)',
-            (g.user['id'], organism, len(results)))
+            (g.user['id'], organism, total_records))
         search_id = result_id.lastrowid
         for result in results:
             db.execute(
