@@ -35,7 +35,25 @@ lengths are only a very small fraction of a complete organism's genome.
 
 ## How to Use
 
-The homepage of this program
+To make a search, you *need to make an account with an email and password. *
+If you try and make a search without being logged in, you will automatically
+be redirected to the login page. Before doing any searches, click here: <br>
+
+![OrganelleSearchHome.png](https://i.ibb.co/hJfzx0qB/Organelle-Register.png) <br>
+
+You will be asked to put an email and a password. ** Please put a valid email in here. ** <br>
+
+After you make an account you can log in either manually or being redirected via a search attempt.
+
+### Searches
+
+You can search any eukaryotic organism you want on this search engine. Be it a
+mushroom, a cat, or a potato you can see what results pop up. For maximum results,
+I highly suggest you use the scientific name of the organism you want to look up.
+
+
+
+
 
 ## Getting Started
 
