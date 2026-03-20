@@ -3,7 +3,6 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for, session
 )
-from werkzeug.exceptions import abort
 from organellebaseflask.auth import login_required
 from organellebaseflask.db import get_db
 
@@ -42,4 +41,12 @@ def search_organelle(organism):
         db.commit()
         return render_template('search/results.html', results=results, organism=organism, total_records=total_records)
 
-
+@bp.route('/history')
+@login_required
+def get_history():
+    db = get_db()
+    history = db.execute(
+        'SELECT * FROM search WHERE user_id = ? ORDER BY created DESC',
+        (g.user['id'],)
+    ).fetchall()
+    return render_template('search/history.html', history=history)

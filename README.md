@@ -11,11 +11,7 @@ Find ambiguity content in the DNA of organelle genomes.
 
 ## Description
 
-This program shows some different statistics on fish diversity using charts. It gives 3 different graphs each representing a different question:
-
-* What fish orders have the most species? (pie chart)
-* What countries have the most species diversity? (bar chart)
-* Since 1980, what orders were the most frequently identified by year? (line graph)
+All DNA sequences contain 
 
 ## Getting Started
 
@@ -56,19 +52,20 @@ flask --app flask
 ```
 ## Help
 
-*Why is this program so slow?
- 
-```
-command to run if program contains helper info
-```
- 
-## Help
+* **Why do I have to make an account to search?**
 
-* **How accurate is this data?**
+Because the API (Entrez in this case) requires an email in order to conduct a search. The email
+you use to make your account is the one that is used for said search to be executed.
 
-As a fish enthusiast, I can tell you that this dataset has many flaws. It was mainly compiled from data observations from as early as the 1890s! As such, many of these observations are biased towards North America but unfortunately this was the best fish data I could find freely available.
+* **Why is the program so slow?**
 
-If you're interested in knowing about more accurate fish databases, please check out [fishbase.se](https://www.fishbase.se/) (one of my favorite scientific websites) or [Eschmeyer's Catalog of Fishes](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp?_gl=1*f99s5a*_gcl_au*MTUxMzk1MjY2LjE3NzE3OTc1MjY.*_ga*MTc0MjQ3NzYwNy4xNzcxNzk3NTI2*_ga_6Y72VP61VZ*czE3NzE3OTc1MjUkbzEkZzAkdDE3NzE3OTc1MjUkajYwJGwwJGg5MzEzOTcxMzQ.).
+Once again, it's because of API limits. Without an API key, the maximum amount of requests you
+can make is 3 per second. Same reason the maximum amount of results shown is 500.
+This has already been accounted for in the script and a limit was placed so even if
+you misspell your email, you shouldn't be blocked. However, please try to put a valid
+
+
+
 
 * **I downloaded the ZIP file but the program is telling me `Download ZIP file and extract occurrence.txt at https://www.gbif.se/ipt/archive.do?r=fishbase`.**
 

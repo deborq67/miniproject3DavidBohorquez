@@ -2,7 +2,6 @@ from Bio import Entrez, SeqIO
 from io import StringIO
 import pandas as pd
 import time
-import sys
 
 '''
 Purpose: This script calculates the ambiguity percentage (percent of non A, T, C, or G
