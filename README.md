@@ -126,7 +126,7 @@ you use to make your account is the one that is used for said search to be execu
 Once again, it's because of API limits. Without an API key, the maximum amount of requests you
 can make is 3 per second. Same reason the maximum amount of results shown is 500.
 This has already been accounted for in the script and a limit was placed so even if
-you misspell your email, you shouldn't be blocked. However, please try to put a valid
+you misspell your email, you shouldn't be blocked. However, please try to put a valid email.
 
 ## Authors
  
