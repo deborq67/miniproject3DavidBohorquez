@@ -89,10 +89,10 @@ The next section will tell you how to install it.
 Due to the more complex nature of this project, a few extra steps will
 be needed to appropriately prepare the files. <br>
 
-First, download the `organellebaseflask.zip` and extract the `organellebaseflask`
+First, download the `organellesearch.zip` and extract the `organellesearch`
 directory from it. *This will be the working directory you will execute Python from.*
 
-* From the directory, get all your dependencies by executing this line on Python:
+* From the directory, get all your dependencies by executing this line on your terminal:
 ```
 pip install -r requirements.txt
 ```
@@ -102,7 +102,7 @@ flask --app organellebaseflask init-db
 ```
 * Finally, execute this line:
 ```
-flask --app organellebaseflask 
+flask --app organellebaseflask run
 ```
 If all goes well, you should see an output of:
 ```

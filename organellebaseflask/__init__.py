@@ -1,3 +1,6 @@
+# INF601 - Advanced Programming in Python
+# David Bohorquez
+# Mini Project 3
 
 
 import os
