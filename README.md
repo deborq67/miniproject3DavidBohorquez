@@ -35,25 +35,41 @@ lengths are only a very small fraction of a complete organism's genome.
 
 ## How to Use
 
-To make a search, you *need to make an account with an email and password. *
+To make a search, you *need to make an account with an email and password.*
 If you try and make a search without being logged in, you will automatically
-be redirected to the login page. Before doing any searches, click here: <br>
+be redirected to the login page. Before doing any searches, click here on the `Register` button: <br>
 
 ![OrganelleSearchHome.png](https://i.ibb.co/hJfzx0qB/Organelle-Register.png) <br>
 
-You will be asked to put an email and a password. ** Please put a valid email in here. ** <br>
+You will be asked to put an email and a password. **Please put a valid email in here.** <br>
 
-After you make an account you can log in either manually or being redirected via a search attempt.
+After you make an account you can log in either manually or be redirected to log in via a search attempt.
 
 ### Searches
 
 You can search any eukaryotic organism you want on this search engine. Be it a
 mushroom, a cat, or a potato you can see what results pop up. For maximum results,
-I highly suggest you use the scientific name of the organism you want to look up.
+I highly suggest you use the scientific name of the organism you want to look up. <br>
 
+If you get no results, don't worry: you'll just get a page that tells you to start a new search. <br>
 
+![OrganelleResults.png](https://i.ibb.co/4nGDNNWv/Organelle-Results.png) <br>
 
+When you're done looking at the results, click the `New Search` button again
+to go back to the home page. <br>
 
+Need some ideas of what to search for? Try these organisms:
+ * *Felis catus* - Domestic cat
+ * *Canis lupus* - Wolf
+ * *Solanum tuberosum* - Potato
+ * *Amanita phalloides* - Death Cap Mushroom
+
+### History
+
+You may have noticed that to the right of `New Search` there is an option
+says `History`. As the name suggests, this button lets you view your entire
+search history including invalid results. It will also show the time stamp
+of when said search was executed.
 
 ## Getting Started
 
@@ -63,34 +79,24 @@ This program was made using Python 3.13.11.
  
 ### Dependencies
  
-You need the actual ZIP file the with database to start.
-
-Download it [here.](https://www.gbif.se/ipt/archive.do?r=fishbase)
-
-* ZIP file should be called `dwca-fishbase-v4.5.zip`. Put into your directory of execution.
-* From it extract `occurrence.txt`, **file is over 300 MB.**
-  * If you forget, the program would send you a friendly reminder to have it in your directory anyway.
-
-All other dependencies needed are listed in the requirements.txt document. To install them, execute this command on Python:
+The requirements.txt file has all the dependencies needed.
+The next section will tell you how to install it.
  
-```
-pip install -r requirements.txt
-```
+### Executing the Program
+ 
+Due to the more complex nature of this project, a few extra steps will
+be needed to appropriately prepare the files. <br>
 
- 
-### Executing program
- 
-* How to run the program
-* Step-by-step bullets
+* First, make sure to 
 ```
 pip install -r requirements.txt
 ```
 ```
-flask --app flaskr init-db
+flask --app organellebaseflask init-db
 ```
 
 ```
-flask --app flask 
+flask --app organellebaseflask 
 ```
 ## Help
 
