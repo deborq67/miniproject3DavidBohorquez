@@ -7,7 +7,7 @@
  
 A search engine that shows the most incomplete
 DNA records of organelle genomes from Genbank.
-![DNA.png](https://images.pexels.com/photos/35967917/pexels-photo-35967917.png)
+![OrganelleSearchHome.png](https://ibb.co/Zz7y1ryp)
 
 ## Description
 
