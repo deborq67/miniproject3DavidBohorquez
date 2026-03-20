@@ -27,7 +27,10 @@ this sequence:
 NNACTAATGACTAATCAGC
 ```
 Calculating ambiguity can be done by taking these other letters and dividing them by
-the total length of the DNA sequence. This is what the project aims to do.
+the total length of the DNA sequence. Since the complete genetic structure of a specimen
+is typically a very long structure, this project instead uses the complete mitochondrial
+and/or chloroplast records(if they exist) of any organism you want since their sequence
+lengths are only a very small fraction of a complete organism's genome.
 
 ## How to Use
 
