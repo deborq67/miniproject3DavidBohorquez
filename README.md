@@ -69,7 +69,9 @@ Need some ideas of what to search for? Try these organisms:
 You may have noticed that to the right of `New Search` there is an option
 says `History`. As the name suggests, this button lets you view your entire
 search history including invalid results. It will also show the time stamp
-of when said search was executed.
+of when said search was executed. <br>
+
+![OrganelleHistory.png](https://i.ibb.co/TqH77P7T/Organelle-History.png) <br>
 
 ## Getting Started
 
@@ -87,17 +89,31 @@ The next section will tell you how to install it.
 Due to the more complex nature of this project, a few extra steps will
 be needed to appropriately prepare the files. <br>
 
-* First, make sure to 
+First, download the `organellebaseflask.zip` and extract the `organellebaseflask`
+directory from it. *This will be the working directory you will execute Python from.*
+
+* From the directory, get all your dependencies by executing this line on Python:
 ```
 pip install -r requirements.txt
 ```
+* Afterwards, you must make the tables Organelle Search uses to display results and keep track of users. Execute this:
 ```
 flask --app organellebaseflask init-db
 ```
-
+* Finally, execute this line:
 ```
 flask --app organellebaseflask 
 ```
+If all goes well, you should see an output of:
+```
+* Serving Flask app 'organellebaseflask'
+* Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+* Running on http://127.0.0.1:5000
+```
+Visit the address and the page should look like the first screenshot. You have
+successfully deployed Organelle Search on your own device!
+
 ## Help
 
 * **Why do I have to make an account to search?**
