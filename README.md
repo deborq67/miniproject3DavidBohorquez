@@ -5,13 +5,33 @@
  
 # Organelle Ambiguity Search
  
-Find ambiguity content in the DNA of organelle genomes.
-![Darter.png](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/etheostoma_brevirostrum_holiday_darter.jpg?itok=FOZxD5ov)
-*Source: USGS*
+A search engine that shows the most incomplete
+DNA records of organelle genomes from Genbank.
+![DNA.png](https://images.pexels.com/photos/35967917/pexels-photo-35967917.png)
 
 ## Description
 
-All DNA sequences contain 
+All DNA sequences contain four distinct bases: adenine (A), thymine (T), 
+cytosine (C), and guanine (G). A DNA sequence uploaded to a genetic
+databank like NCBI GenBank most likely looks like the following:
+
+```
+GCTTATTCTCTATGCGGGG
+```
+Sometimes, however, due to either the quality of the DNA sample, the sequencing
+technology, or human error, ambiguities arise and are usually represented by
+letters that are not A, T, C, or G. Take, for example, the first 2 `N`s in 
+this sequence:
+
+```
+NNACTAATGACTAATCAGC
+```
+Calculating ambiguity can be done by taking these other letters and dividing them by
+the total length of the DNA sequence. This is what the project aims to do.
+
+## How to Use
+
+The homepage of this program
 
 ## Getting Started
 
