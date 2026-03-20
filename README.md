@@ -130,7 +130,7 @@ you misspell your email, you shouldn't be blocked. However, please try to put a 
 
 ## Authors
  
-David Bohorquez
+* David Bohorquez
  
 ## Version History
 
