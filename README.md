@@ -66,7 +66,7 @@ Need some ideas of what to search for? Try these organisms:
 
 ### History
 
-You may have noticed that to the right of `New Search` there is an option
+You may have noticed that to the right of `New Search`, there is an option that
 says `History`. As the name suggests, this button lets you view your entire
 search history including invalid results. It will also show the time stamp
 of when said search was executed. <br>
